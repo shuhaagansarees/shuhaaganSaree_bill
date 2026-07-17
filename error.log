@@ -1,0 +1,145 @@
+2026-07-04 10:04:12,730 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-04 10:04:12,796 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-04 10:04:12,801 INFO Serving on http://127.0.0.1:5000
+2026-07-04 10:31:46,986 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-04 10:31:47,136 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-04 10:31:47,144 INFO Serving on http://127.0.0.1:5000
+2026-07-04 11:05:24,520 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-04 11:05:24,713 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-04 11:05:24,723 INFO Serving on http://127.0.0.1:5000
+2026-07-04 15:52:57,288 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-04 15:52:57,429 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-04 15:52:57,438 INFO Serving on http://127.0.0.1:5000
+2026-07-04 15:54:50,116 INFO Generated INV-1001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1001.pdf (Rs.3500)
+2026-07-10 16:33:09,645 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-10 16:33:09,882 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-10 16:33:09,889 INFO Serving on http://127.0.0.1:5000
+2026-07-10 16:33:13,939 INFO Generated INV-1001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1001.pdf (Rs.5900)
+2026-07-10 16:51:49,264 INFO Generated INV-1006 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1006.pdf (Rs.47200)
+2026-07-10 16:54:45,396 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-10 16:54:45,610 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-10 16:54:45,616 INFO Serving on http://127.0.0.1:5000
+2026-07-10 16:54:48,750 INFO Generated INV-1005 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1005.pdf (Rs.25000)
+2026-07-10 17:00:47,996 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-10 17:00:48,118 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-10 17:00:48,124 INFO Serving on http://127.0.0.1:5000
+2026-07-10 17:00:51,297 INFO Generated INV-1005 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1005.pdf (Rs.25000)
+2026-07-10 17:11:00,732 INFO Generated INV-1001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1001.pdf (Rs.3500)
+2026-07-17 09:56:42,147 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 09:56:42,391 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 09:56:42,391 INFO Serving on http://127.0.0.1:5000
+2026-07-17 10:03:51,781 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 10:03:51,922 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 10:03:51,929 INFO Serving on http://127.0.0.1:5000
+2026-07-17 10:06:02,865 INFO Generated INV-1006 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1006.pdf (Rs.47200)
+2026-07-17 10:09:34,229 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 10:09:34,360 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 10:09:34,366 INFO Serving on http://127.0.0.1:5000
+2026-07-17 10:10:14,127 INFO Generated INV-1006 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1006.pdf (Rs.47200)
+2026-07-17 10:14:14,782 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 10:14:14,900 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 10:14:14,906 INFO Serving on http://127.0.0.1:5000
+2026-07-17 10:16:30,893 INFO Generated INV-1005 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1005.pdf (Rs.25000)
+2026-07-17 10:21:17,951 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 10:21:18,150 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 10:21:18,158 INFO Serving on http://127.0.0.1:5000
+2026-07-17 10:21:48,032 INFO Generated INV-1002 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1002.pdf (Rs.1800)
+2026-07-17 10:26:51,848 INFO Generated INV-1001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1001.pdf (Rs.3500)
+2026-07-17 10:28:51,861 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 10:28:51,970 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 10:28:51,976 INFO Serving on http://127.0.0.1:5000
+2026-07-17 10:29:15,505 INFO Generated INV-1004 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1004.pdf (Rs.2500)
+2026-07-17 10:32:31,808 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 10:32:32,012 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 10:32:32,016 INFO Serving on http://127.0.0.1:5000
+2026-07-17 10:32:57,751 INFO Generated INV-1005 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1005.pdf (Rs.25000)
+2026-07-17 10:35:36,763 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 10:35:36,962 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 10:35:36,968 INFO Serving on http://127.0.0.1:5000
+2026-07-17 10:38:22,641 INFO Generated INV-1002 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1002.pdf (Rs.1800)
+2026-07-17 10:40:52,252 ERROR Fatal error in download route
+Traceback (most recent call last):
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\app.py", line 240, in download
+    abort(404, "PDF not found.")
+  File "C:\Users\RAJ YAGNIK\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\flask\helpers.py", line 291, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\RAJ YAGNIK\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\werkzeug\exceptions.py", line 887, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotFound: 404 Not Found: PDF not found.
+2026-07-17 10:43:49,258 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 10:43:49,379 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 10:43:49,385 INFO Serving on http://127.0.0.1:5000
+2026-07-17 11:00:35,242 INFO Generated INV-1001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1001.pdf (Rs.2400)
+2026-07-17 11:02:14,613 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 11:02:14,758 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 11:02:14,767 INFO Serving on http://127.0.0.1:5000
+2026-07-17 11:02:46,968 INFO Generated INV-1004 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1004.pdf (Rs.2500)
+2026-07-17 11:03:08,564 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 11:03:08,711 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 11:03:08,720 INFO Serving on http://127.0.0.1:5000
+2026-07-17 11:03:31,526 INFO Generated INV-1004 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1004.pdf (Rs.2500)
+2026-07-17 11:05:48,180 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 11:05:48,319 INFO Starting Waitress server on 127.0.0.1:5000
+2026-07-17 11:05:48,328 INFO Serving on http://127.0.0.1:5000
+2026-07-17 11:06:55,763 INFO Generated INV-1004 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1004.pdf (Rs.6000)
+2026-07-17 11:17:31,663 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 11:17:31,779 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-17 11:17:31,780 INFO [33mPress CTRL+C to quit[0m
+2026-07-17 11:18:04,872 INFO Generated INV-1004 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1004.pdf (Rs.2500)
+2026-07-17 11:20:01,591 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 11:20:01,623 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-17 11:20:01,623 INFO [33mPress CTRL+C to quit[0m
+2026-07-17 11:20:02,938 INFO 127.0.0.1 - - [17/Jul/2026 11:20:02] "GET / HTTP/1.1" 200 -
+2026-07-17 11:20:18,020 INFO 127.0.0.1 - - [17/Jul/2026 11:20:18] "GET /api/customer/7990536504 HTTP/1.1" 200 -
+2026-07-17 11:20:45,110 INFO 127.0.0.1 - - [17/Jul/2026 11:20:45] "GET /dashboard HTTP/1.1" 200 -
+2026-07-17 11:20:47,948 INFO 127.0.0.1 - - [17/Jul/2026 11:20:47] "GET / HTTP/1.1" 200 -
+2026-07-17 11:20:57,110 INFO 127.0.0.1 - - [17/Jul/2026 11:20:57] "GET /api/customer/7990536504 HTTP/1.1" 200 -
+2026-07-17 11:21:16,417 ERROR Exception on /generate_new [POST]
+Traceback (most recent call last):
+  File "C:\Users\RAJ YAGNIK\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RAJ YAGNIK\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RAJ YAGNIK\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RAJ YAGNIK\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\app.py", line 346, in generate_new
+    pdf_path, total_amount = billing.generate_pdf(invoice_no, billing_items, customer_name=name, customer_phone=phone)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: generate_pdf() got an unexpected keyword argument 'customer_name'
+2026-07-17 11:21:16,422 INFO 127.0.0.1 - - [17/Jul/2026 11:21:16] "[35m[1mPOST /generate_new HTTP/1.1[0m" 500 -
+2026-07-17 11:24:17,352 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 11:24:17,392 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-17 11:24:17,392 INFO [33mPress CTRL+C to quit[0m
+2026-07-17 11:24:18,702 INFO 127.0.0.1 - - [17/Jul/2026 11:24:18] "GET / HTTP/1.1" 200 -
+2026-07-17 11:24:50,471 INFO 127.0.0.1 - - [17/Jul/2026 11:24:50] "GET /api/customer/7990536504 HTTP/1.1" 200 -
+2026-07-17 11:25:28,826 INFO 127.0.0.1 - - [17/Jul/2026 11:25:28] "[32mPOST /generate_new HTTP/1.1[0m" 302 -
+2026-07-17 11:25:28,843 INFO 127.0.0.1 - - [17/Jul/2026 11:25:28] "GET /success/INV-1002 HTTP/1.1" 200 -
+2026-07-17 11:25:30,908 INFO 127.0.0.1 - - [17/Jul/2026 11:25:30] "GET /download/INV-1002 HTTP/1.1" 200 -
+2026-07-17 11:26:45,315 INFO 127.0.0.1 - - [17/Jul/2026 11:26:45] "GET /dashboard HTTP/1.1" 200 -
+2026-07-17 11:26:47,474 INFO 127.0.0.1 - - [17/Jul/2026 11:26:47] "GET /success/INV-1002 HTTP/1.1" 200 -
+2026-07-17 11:26:49,656 INFO 127.0.0.1 - - [17/Jul/2026 11:26:49] "GET /dashboard HTTP/1.1" 200 -
+2026-07-17 11:29:13,293 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 11:29:13,326 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-17 11:29:13,326 INFO [33mPress CTRL+C to quit[0m
+2026-07-17 11:29:14,637 INFO 127.0.0.1 - - [17/Jul/2026 11:29:14] "GET / HTTP/1.1" 200 -
+2026-07-17 17:40:08,770 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-17 17:40:08,818 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-17 17:40:08,818 INFO [33mPress CTRL+C to quit[0m
+2026-07-17 17:40:10,100 INFO 127.0.0.1 - - [17/Jul/2026 17:40:10] "GET / HTTP/1.1" 200 -
+2026-07-17 17:40:10,201 INFO 127.0.0.1 - - [17/Jul/2026 17:40:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-17 17:40:33,771 INFO 127.0.0.1 - - [17/Jul/2026 17:40:33] "GET /api/customer/9328685900 HTTP/1.1" 200 -
+2026-07-17 17:41:09,646 INFO 127.0.0.1 - - [17/Jul/2026 17:41:09] "[32mPOST /generate_new HTTP/1.1[0m" 302 -
+2026-07-17 17:41:09,663 INFO 127.0.0.1 - - [17/Jul/2026 17:41:09] "GET /success/INV-1003 HTTP/1.1" 200 -
+2026-07-17 17:41:44,395 INFO 127.0.0.1 - - [17/Jul/2026 17:41:44] "GET /download/INV-1003 HTTP/1.1" 200 -
+2026-07-17 17:43:09,337 INFO 127.0.0.1 - - [17/Jul/2026 17:43:09] "GET / HTTP/1.1" 200 -

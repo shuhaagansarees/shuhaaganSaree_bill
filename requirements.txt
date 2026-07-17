@@ -1,0 +1,7 @@
+flask
+openpyxl
+reportlab
+qrcode[pil]
+pillow
+waitress
+pyinstaller

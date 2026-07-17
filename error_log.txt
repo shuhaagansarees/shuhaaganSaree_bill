@@ -1,0 +1,118 @@
+2026-07-03 17:14:43,085 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-03 17:14:43,203 INFO Serving on http://127.0.0.1:5000
+2026-07-03 17:14:50,252 INFO Generated INV-1001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1001.pdf (Rs.5900)
+2026-07-03 17:14:58,881 INFO Generated INV-1003 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1003.pdf (Rs.32000)
+2026-07-03 17:17:45,574 INFO Generated INV-1003 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1003.pdf (Rs.9000)
+2026-07-03 18:08:35,979 ERROR Failed to generate bill for INV-1004
+Traceback (most recent call last):
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\app.py", line 192, in generate
+    billing.mark_as_done(invoice_no)
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\billing.py", line 72, in mark_as_done
+    wb.save(config.EXCEL_PATH)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\RAJ YAGNIK\\Music\\billing_system\\billing_data.xlsx'
+2026-07-03 18:08:39,267 ERROR Failed to generate bill for INV-1004
+Traceback (most recent call last):
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\app.py", line 192, in generate
+    billing.mark_as_done(invoice_no)
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\billing.py", line 72, in mark_as_done
+    wb.save(config.EXCEL_PATH)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\RAJ YAGNIK\\Music\\billing_system\\billing_data.xlsx'
+2026-07-03 18:09:35,417 ERROR Failed to generate bill for INV-1002
+Traceback (most recent call last):
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\app.py", line 192, in generate
+    billing.mark_as_done(invoice_no)
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\billing.py", line 72, in mark_as_done
+    wb.save(config.EXCEL_PATH)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\RAJ YAGNIK\\Music\\billing_system\\billing_data.xlsx'
+2026-07-03 18:09:39,933 ERROR Failed to generate bill for INV-1004
+Traceback (most recent call last):
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\app.py", line 192, in generate
+    billing.mark_as_done(invoice_no)
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\billing.py", line 72, in mark_as_done
+    wb.save(config.EXCEL_PATH)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\RAJ YAGNIK\\Music\\billing_system\\billing_data.xlsx'
+2026-07-03 18:24:34,234 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-03 18:24:34,365 INFO Serving on http://127.0.0.1:5000
+2026-07-03 18:24:40,480 ERROR Failed to generate bill for INV-1002
+Traceback (most recent call last):
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\app.py", line 192, in generate
+    billing.mark_as_done(invoice_no)
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\billing.py", line 72, in mark_as_done
+    wb.save(config.EXCEL_PATH)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\RAJ YAGNIK\\Music\\billing_system\\billing_data.xlsx'
+2026-07-03 18:24:56,713 INFO Generated INV-1005 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1005.pdf (Rs.25000)
+2026-07-03 18:25:46,204 INFO Generated INV-1002 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1002.pdf (Rs.1800)
+2026-07-03 18:26:25,882 INFO Generated INV-1004 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1004.pdf (Rs.8500)
+2026-07-04 09:53:15,407 INFO App starting. BASE_DIR=C:\Users\RAJ YAGNIK\Music\billing_system
+2026-07-04 09:53:15,636 INFO Serving on http://127.0.0.1:5000
+2026-07-04 09:53:21,539 INFO Generated INV-2001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-2001.pdf (Rs.19100)
+2026-07-04 10:05:03,387 INFO Generated INV-1005 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1005.pdf (Rs.25000)
+2026-07-04 10:08:08,805 ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RAJ YAGNIK\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RAJ YAGNIK\Music\billing_system\app.py", line 172, in index
+    logging.warning("billing_data.xlsx is locked (probably open in Excel)")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2026-07-04 10:18:42,538 INFO Generated INV-3001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-3001.pdf (Rs.100)
+2026-07-04 10:19:35,118 INFO Generated INV-3003 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-3003.pdf (Rs.900)
+2026-07-04 10:19:37,966 INFO Generated INV-3002 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-3002.pdf (Rs.400)
+2026-07-04 10:31:51,682 INFO Generated INV-1006 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1006.pdf (Rs.47200)
+2026-07-04 11:02:11,095 INFO Generated INV-1006 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1006.pdf (Rs.47200)
+2026-07-04 11:05:47,649 INFO Generated INV-1001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1001.pdf (Rs.3500)
+2026-07-04 11:10:48,895 INFO Generated INV-1001 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1001.pdf (Rs.2400)
+2026-07-04 11:15:20,227 INFO Generated INV-1002 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1002.pdf (Rs.1800)
+2026-07-04 11:25:03,940 INFO Generated INV-1004 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1004.pdf (Rs.2500)
+2026-07-04 11:27:00,568 INFO Generated INV-1004 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1004.pdf (Rs.6000)
+2026-07-04 11:32:22,989 INFO Generated INV-1006 -> C:\Users\RAJ YAGNIK\Music\billing_system\invoices\INV-1006.pdf (Rs.47200)

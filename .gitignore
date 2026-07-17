@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+billing.db
+pdfs/
+qrs/
+venv/
+env/
+.env
