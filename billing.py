@@ -116,8 +116,8 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
     subtotal = sum((it["qty"] or 0) * (it["price"] or 0) for it in items)
     discount_amount = subtotal * (discount_percent / 100)
     taxable = subtotal - discount_amount
-    gst_amount = taxable * (gst_rate / 100)
-    total_amount = taxable + gst_amount
+    gst_amount = 0  # GST removed
+    total_amount = taxable
 
     qr_path = os.path.join(config.QR_FOLDER, f"{invoice_no}_qr.png")
     if upi_id:
@@ -159,15 +159,8 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
            fill=1, stroke=0)
 
     # ================================================================
-    #  WATERMARK
+    #  WATERMARK  (removed as per client request)
     # ================================================================
-    c.saveState()
-    c.translate(w / 2, h / 2)
-    c.rotate(30)
-    c.setFont("Times-Bold", 72)
-    c.setFillColorRGB(0.88, 0.85, 0.85)  # Subtle pinkish-grey, visible but not distracting
-    c.drawCentredString(0, 0, "SHUHAAGAN SAREE")
-    c.restoreState()
 
 
     content_top = h - margin - border_thickness - 3 * mm
@@ -214,9 +207,10 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
     # Measure every right-column line's pixel width
     right_items = []  # list of (text, width) for debug
     icon_size = 4 * mm
-    for p in config.SHOP_PHONES:
-        sw = c.stringWidth(p, "Helvetica-Bold", 11) + icon_size + 1.5 * mm
-        right_items.append((p + " +icon", sw))
+    for label, p in config.SHOP_PHONES:
+        label_str = f"({label}) {p}"
+        sw = c.stringWidth(label_str, "Helvetica-Bold", 11) + 1.5 * mm
+        right_items.append((label_str, sw))
     if hasattr(config, "SHOP_GST") and config.SHOP_GST:
         gst_str = "GST : " + config.SHOP_GST
         sw = c.stringWidth(gst_str, "Helvetica-Bold", 10)
@@ -321,12 +315,9 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
     c.setFillColor(HexColor("#8B0000"))
     c.setFont("Helvetica-Bold", 11)
     phone_icon_path = os.path.join(config.BASE_DIR, "assets", "phone_icon.png")
-    for phone in config.SHOP_PHONES:
-        phone_w = c.stringWidth(phone, "Helvetica-Bold", 11)
-        if os.path.exists(phone_icon_path):
-            c.drawImage(phone_icon_path, contact_right - phone_w - icon_size - 1.5 * mm,
-                        cy - 0.5 * mm, width=icon_size, height=icon_size, mask="auto")
-        c.drawRightString(contact_right, cy, phone)
+    for label, phone in config.SHOP_PHONES:
+        display_phone = f"({label}) {phone}"
+        c.drawRightString(contact_right, cy, display_phone)
         cy -= 5 * mm
 
     cy -= 1 * mm

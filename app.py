@@ -175,13 +175,9 @@ CREATE_TEMPLATE = PAGE_STYLE + '''
           <div style="margin-bottom: 8px;">Subtotal: Rs. <span id="subTotal">0.00</span></div>
           <div style="margin-bottom: 8px; display: flex; justify-content: flex-end; align-items: center; gap: 10px;">
             Discount: 
-            <select name="discount_percent" id="discount_percent" class="form-control" style="width: auto; padding: 4px; font-size: 14px;" onchange="calcGrandTotal()">
-              <option value="0">0% (Fix Rate)</option>
-              <option value="10">10%</option>
-              <option value="20">20%</option>
-            </select>
+            <input type="number" name="discount_percent" id="discount_percent" class="form-control" style="width: 80px; padding: 4px; font-size: 14px;" value="0" min="0" max="20" onchange="calcGrandTotal()" oninput="calcGrandTotal()">
+            <span>%</span>
           </div>
-          <div style="margin-bottom: 8px; font-size: 14px; color: #555;">GST (5%): Rs. <span id="gstAmount">0.00</span></div>
           <h2 style="color:#8B0000; margin: 10px 0 15px 0; border-top: 2px solid #ccc; padding-top: 10px;">Grand Total: Rs. <span id="grandTotal">0.00</span></h2>
           <button type="submit" class="btn btn-green" style="font-size: 18px; padding: 12px 30px; width: 100%;" id="generateBtn">Generate Bill & PDF</button>
         </div>
@@ -231,15 +227,9 @@ function calcGrandTotal() {
     
     document.getElementById('subTotal').innerText = subtotal.toFixed(2);
     
-    const discPercent = parseFloat(document.getElementById('discount_percent').value) || 0;
+    const discPercent = Math.min(20, Math.max(0, parseFloat(document.getElementById('discount_percent').value) || 0));
     const discAmount = subtotal * (discPercent / 100);
-    const taxable = subtotal - discAmount;
-    
-    const gstRate = 5;
-    const gstAmount = taxable * (gstRate / 100);
-    document.getElementById('gstAmount').innerText = gstAmount.toFixed(2);
-    
-    const grandTotal = taxable + gstAmount;
+    const grandTotal = subtotal - discAmount;
     document.getElementById('grandTotal').innerText = grandTotal.toFixed(2);
 }
 
@@ -385,7 +375,7 @@ def generate_new():
         })
     
     # Save to DB
-    database.save_invoice(invoice_no, phone, items, discount_percent=discount_percent, gst_rate=5)
+    database.save_invoice(invoice_no, phone, items, discount_percent=discount_percent, gst_rate=0)
     
     # Generate PDF
     # Convert DB items format to what billing.py expects
@@ -402,7 +392,7 @@ def generate_new():
             "upi_id": ""
         })
     
-    pdf_path, total_amount = billing.generate_pdf(invoice_no, billing_items, discount_percent=discount_percent, gst_rate=5)
+    pdf_path, total_amount = billing.generate_pdf(invoice_no, billing_items, discount_percent=discount_percent, gst_rate=0)
     
     return redirect(url_for("success", invoice_no=invoice_no))
 

@@ -17,7 +17,11 @@ SHOP_ADDRESSES = [
     ("Dindoli", "Shop No. UG-01/02, Shree Krishna AC Mall, Near Flower Garden, Nr. Community Hall, Dindoli, Surat, Gujarat"),
     ("Godadara", "Shop No. 4, Devikrupa Row House, Nr. Shree Krishna Stellar, Opp Priyanka Metro City, Maharana Pratap Road, Godadara, Surat, Gujarat 395010"),
 ]
-SHOP_PHONES = ["+91 97271 14581", "+91 99981 97511"]
+SHOP_PHONES = [
+    ("D", "+91 99981 48511"),
+    ("G", "+91 97271 14581"),
+    ("G", "+91 99981 97511"),
+]
 GST_NUMBER = "24FOTPS0133A1Z4"
 SHOP_GST = GST_NUMBER
 
