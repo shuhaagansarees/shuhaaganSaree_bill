@@ -436,9 +436,14 @@ def delete_invoice_route(invoice_no):
     return redirect(url_for("dashboard"))
 
 def open_browser():
-    webbrowser.open_new("http://127.0.0.1:5000/")
+    try:
+        webbrowser.open_new("http://127.0.0.1:5000/")
+    except Exception:
+        pass
 
 if __name__ == "__main__":
-    t = threading.Timer(1.0, open_browser)
-    t.start()
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    if not os.environ.get("REPL_ID"):  # Only open browser if not on Replit
+        t = threading.Timer(1.0, open_browser)
+        t.start()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
