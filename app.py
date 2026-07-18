@@ -353,7 +353,10 @@ def api_customer(phone):
 def generate_new():
     phone = request.form.get("customer_phone")
     name = request.form.get("customer_name")
-    discount_percent = int(request.form.get("discount_percent", 0))
+    try:
+        discount_percent = int(float(request.form.get("discount_percent") or 0))
+    except ValueError:
+        discount_percent = 0
     
     item_names = request.form.getlist("item_name[]")
     hsns = request.form.getlist("hsn[]")
