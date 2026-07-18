@@ -26,6 +26,8 @@ def init_db():
             created_at TIMESTAMP,
             customer_phone TEXT,
             total_amount REAL,
+            discount_percent INTEGER DEFAULT 0,
+            gst_rate REAL DEFAULT 5,
             FOREIGN KEY (customer_phone) REFERENCES customers(phone)
         )
     ''')
