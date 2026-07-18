@@ -322,7 +322,8 @@ SUCCESS_TEMPLATE = PAGE_STYLE + '''
       <!-- Print directly opens the PDF and calls print -->
       <a href="/download/{{ invoice_no }}" class="btn" style="background:#424242;" target="_blank" onclick="setTimeout(() => window.print(), 1000);">🖨️ Print Bill</a>
       
-      {% set wa_msg = "Hello " + customer_name + ",%0a%0aThank you for shopping at " + shop_name + "!%0aYour bill amount is Rs. " + (total_amount|string) + ".%0a%0aRegards,%0a" + shop_name %}
+      {% set bill_url = request.host_url + "download/" + invoice_no %}
+      {% set wa_msg = "Hello " + customer_name + ",%0a%0aThank you for shopping at " + shop_name + "!%0aYour bill amount is Rs. " + (total_amount|string) + ".%0a%0aView and download your bill here: " + bill_url + "%0a%0aRegards,%0a" + shop_name %}
       <a href="https://wa.me/91{{ customer_phone }}?text={{ wa_msg }}" class="btn btn-green" target="_blank">💬 Send via WhatsApp</a>
     </div>
     
