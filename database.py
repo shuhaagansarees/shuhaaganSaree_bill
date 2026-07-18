@@ -145,14 +145,23 @@ def get_invoice_with_items(invoice_no):
             'line_total': row['line_total']
         })
         
+    try:
+        discount_percent = inv_row['discount_percent'] or 0
+    except (IndexError, KeyError):
+        discount_percent = 0
+    try:
+        gst_rate = inv_row['gst_rate'] or 5
+    except (IndexError, KeyError):
+        gst_rate = 5
+        
     return {
         'invoice_no': inv_row['invoice_no'],
         'date': inv_row['created_at'],
         'customer_name': inv_row['name'],
         'customer_phone': inv_row['phone'],
         'total_amount': inv_row['total_amount'],
-        'discount_percent': inv_row.get('discount_percent', 0),
-        'gst_rate': inv_row.get('gst_rate', 5),
+        'discount_percent': discount_percent,
+        'gst_rate': gst_rate,
         'items': items
     }
 

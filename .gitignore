@@ -6,3 +6,9 @@ qrs/
 venv/
 env/
 .env
+
+error.log
+invoices/
+*.bat
+*.zip
+patch_mobile.py

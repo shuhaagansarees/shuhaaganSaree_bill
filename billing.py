@@ -164,8 +164,8 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
     c.saveState()
     c.translate(w / 2, h / 2)
     c.rotate(30)
-    c.setFont("Times-Bold", 80)
-    c.setFillColorRGB(0.95, 0.95, 0.95)  # Faint grey
+    c.setFont("Times-Bold", 72)
+    c.setFillColorRGB(0.88, 0.85, 0.85)  # Subtle pinkish-grey, visible but not distracting
     c.drawCentredString(0, 0, "SHUHAAGAN SAREE")
     c.restoreState()
 
@@ -590,11 +590,16 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
     # ── GRAND TOTAL row ──
     total_row_y = breakdown_y - 2 * mm
     c.setFillColor(MAROON)
-    c.setFont("Helvetica-Bold", 14)
+    c.setFont("Helvetica-Bold", 13)
     formatted_total = format_indian_rupee(total_amount)
     
-    c.drawString(label_x, total_row_y, "GRAND TOTAL")
-    c.drawRightString(value_x, total_row_y, f"Rs. {formatted_total}")
+    # Draw label and value with enough gap
+    total_label = "GRAND TOTAL:"
+    total_value = f"Rs. {formatted_total}"
+    # Put label right-aligned before the amount column
+    label_right_edge = col_amt_x - 4 * mm
+    c.drawRightString(label_right_edge, total_row_y, total_label)
+    c.drawRightString(value_x, total_row_y, total_value)
 
     # Gold line under total
     c.setStrokeColor(GOLD)
@@ -640,7 +645,7 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
     c.setFont("Helvetica", 8)
     for idx_t, term in enumerate(config.TERMS_OF_SALE, 1):
         c.drawString(terms_x, terms_y, f"{idx_t}. {term}")
-        terms_y -= 4.5 * mm
+        terms_y -= 5 * mm
 
     # ================================================================
     #  SIGNATURES  (positioned relative to terms/QR, not page bottom)
@@ -663,16 +668,6 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
     c.drawRightString(content_right - 4 * mm, sig_y - 8 * mm, "SAREE")
 
 
-    # ================================================================
-    #  TERMS & CONDITIONS
-    # ================================================================
-    c.setFillColor(HexColor("#444444"))
-    c.setFont("Helvetica-Bold", 9)
-    c.drawString(content_left + 4 * mm, content_bot + 24 * mm, "Terms & Conditions:")
-    c.setFont("Helvetica", 8)
-    c.drawString(content_left + 4 * mm, content_bot + 19 * mm, "1. Goods once sold will not be taken back.")
-    c.drawString(content_left + 4 * mm, content_bot + 14 * mm, "2. Exchange allowed within 7 days with bill only.")
-    c.drawString(content_left + 4 * mm, content_bot + 9 * mm, "3. Subject to Surat jurisdiction.")
 
     c.save()
     return pdf_path, total_amount

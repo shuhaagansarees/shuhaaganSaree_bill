@@ -83,9 +83,26 @@ PAGE_STYLE = '''
   .invoice-row:last-child { border-bottom: none; }
   .invoice-row:nth-child(even) { background: #fafafa; }
   
+
   .dash-footer { background: #f9f4f4; padding: 15px 28px; font-size: 12px; color: #555;
                  border-top: 1px solid #eadfd2; line-height: 1.5; text-align: center; }
+                 
+  .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 15px; border: 1px solid #eee; border-radius: 4px;}
+  
+  @media (max-width: 768px) {
+    body { padding: 10px; }
+    .form-row { flex-direction: column; gap: 10px; }
+    .dashboard-cards { flex-direction: column; gap: 10px; }
+    .brand-header h1 { font-size: 18px; }
+    .brand-header { padding: 15px; }
+    .body-pad { padding: 15px; }
+    .btn { display: block; width: 100%; text-align: center; margin-bottom: 10px; box-sizing: border-box; }
+    .summary-block { flex-direction: column !important; align-items: stretch !important; gap: 15px; }
+    .summary-block > div { width: 100% !important; text-align: left !important; }
+    table.items-table { margin-top: 0; min-width: 600px; } /* forces scroll instead of squish */
+  }
 </style>
+
 '''
 
 HEADER_BLOCK = '''
@@ -104,7 +121,7 @@ HEADER_BLOCK = '''
 '''
 
 CREATE_TEMPLATE = PAGE_STYLE + '''
-<html><head><title>Create Bill - {{ shop_name }}</title></head>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Create Bill - {{ shop_name }}</title></head>
 <body>
 <div class="container">
   ''' + HEADER_BLOCK + '''
@@ -127,6 +144,7 @@ CREATE_TEMPLATE = PAGE_STYLE + '''
       
       <div class="card">
           <h3 style="color:#8B0000; margin-bottom:15px; border-bottom:1px solid #eee; padding-bottom:10px;">Bill Items</h3>
+          <div class="table-responsive">
           <table class="items-table" id="itemsTable">
             <thead>
               <tr>
@@ -141,6 +159,7 @@ CREATE_TEMPLATE = PAGE_STYLE + '''
             <tbody id="itemsBody">
             </tbody>
           </table>
+          </div>
           <button type="button" class="btn" style="background:#555; margin-top:10px;" onclick="addRow()">+ Add Item</button>
       </div>
       
@@ -237,7 +256,7 @@ addRow();
 '''
 
 DASHBOARD_TEMPLATE = PAGE_STYLE + '''
-<html><head><title>Dashboard - {{ shop_name }}</title></head>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dashboard - {{ shop_name }}</title></head>
 <body>
 <div class="container">
   ''' + HEADER_BLOCK + '''
@@ -289,7 +308,7 @@ DASHBOARD_TEMPLATE = PAGE_STYLE + '''
 '''
 
 SUCCESS_TEMPLATE = PAGE_STYLE + '''
-<html><head><title>Bill Ready - {{ shop_name }}</title></head>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bill Ready - {{ shop_name }}</title></head>
 <body>
 <div class="container">
   ''' + HEADER_BLOCK + '''
@@ -366,8 +385,8 @@ def generate_new():
     billing_items = []
     for item in items:
         billing_items.append({
-            "Item Name": item["item_name"],
-            "HSN": item["hsn"],
+            "item_name": item["item_name"],
+            "hsn": item["hsn"],
             "qty": item["qty"],
             "price": item["price"],
             "line_total": item["line_total"],
@@ -422,4 +441,4 @@ def open_browser():
 if __name__ == "__main__":
     t = threading.Timer(1.0, open_browser)
     t.start()
-    app.run(host="127.0.0.1", port=5000, debug=False)
+    app.run(host="0.0.0.0", port=5000, debug=False)
