@@ -580,26 +580,40 @@ def generate_pdf(invoice_no, items, discount_percent=0, gst_rate=5):
         
     # ── GRAND TOTAL row ──
     total_row_y = breakdown_y - 2 * mm
-    c.setFillColor(MAROON)
     c.setFont("Helvetica-Bold", 13)
     formatted_total = format_indian_rupee(total_amount)
     
-    # Draw label and value with enough gap
     total_label = "GRAND TOTAL:"
     total_value = f"Rs. {formatted_total}"
-    # Put label right-aligned before the amount column
-    label_right_edge = col_amt_x - 4 * mm
-    c.drawRightString(label_right_edge, total_row_y, total_label)
+    
+    label_w = c.stringWidth(total_label, "Helvetica-Bold", 13)
+    val_w = c.stringWidth(total_value, "Helvetica-Bold", 13)
+    box_width = label_w + val_w + 14 * mm
+    box_height = 9 * mm
+    
+    # Calculate box position based on the rightmost edge of the amount
+    box_x = value_x + 3 * mm - box_width
+    box_y = total_row_y - 2.5 * mm
+    
+    # Draw box
+    c.setFillColor(MAROON_LIGHT)
+    c.setStrokeColor(MAROON)
+    c.setLineWidth(1)
+    c.roundRect(box_x, box_y, box_width, box_height, 2 * mm, fill=1, stroke=1)
+    
+    # Draw text inside box
+    c.setFillColor(MAROON)
+    c.drawString(box_x + 4 * mm, total_row_y, total_label)
     c.drawRightString(value_x, total_row_y, total_value)
 
-    # Gold line under total
+    # Gold line under total (shifted down a bit to clear the box)
+    line_y = box_y - 3 * mm
     c.setStrokeColor(GOLD)
     c.setLineWidth(2)
-    c.line(content_left, total_row_y - 4 * mm,
-           content_right, total_row_y - 4 * mm)
+    c.line(content_left, line_y, content_right, line_y)
     
     # Update nr_y so QR code places correctly
-    nr_y = total_row_y
+    nr_y = line_y + 2 * mm
 
     # ================================================================
     #  UPI QR CODE  (left side, beside terms)
