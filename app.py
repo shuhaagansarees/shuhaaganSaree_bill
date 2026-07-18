@@ -25,6 +25,13 @@ logging.info("App starting. BASE_DIR=%s", config.BASE_DIR)
 # Initialize DB
 database.init_db()
 
+@app.errorhandler(500)
+def internal_error(e):
+    import traceback
+    tb = traceback.format_exc()
+    logging.error("500 Error: %s", tb)
+    return f"<h1>Server Error</h1><pre>{tb}</pre><p><a href='/'>Go Home</a></p>", 500
+
 def _logo_data_uri():
     try:
         if os.path.exists(config.LOGO_PATH):

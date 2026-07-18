@@ -32,6 +32,16 @@ def init_db():
         )
     ''')
     
+    # Auto-migration: add columns if they don't exist (for old databases)
+    try:
+        c.execute("ALTER TABLE invoices ADD COLUMN discount_percent INTEGER DEFAULT 0")
+    except Exception:
+        pass  # Column already exists
+    try:
+        c.execute("ALTER TABLE invoices ADD COLUMN gst_rate REAL DEFAULT 5")
+    except Exception:
+        pass  # Column already exists
+    
     c.execute('''
         CREATE TABLE IF NOT EXISTS invoice_items (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
